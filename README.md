@@ -1,10 +1,10 @@
 # pi-argo
 
-A [pi](https://github.com/earendil-works/pi) package that adds the Argo gateway (ANL) as model provider `argo`. It holds one extension, no build step and no dependencies beyond what pi provides.
+A [pi](https://github.com/earendil-works/pi) package that adds the Argo gateway (ANL) as model provider `argo`, implemented as an extension.
 
-- Models are listed live from `GET <gateway>/v1/models` (embedding models dropped).
+- Models are listed live from `GET <gateway>/v1/models`.
 - Claude models use the native Anthropic Messages API at the gateway root, with strict tools off (the gateway rejects strict tool schemas for Claude models).
-- GPT and Gemini models use OpenAI Chat Completions at `<gateway>/v1`, because the gateway's Responses endpoint rejects replayed `status` fields.
+- GPT and Gemini models use OpenAI Chat Completions at `<gateway>/v1`, because the gateway's Responses endpoint appears to reject replayed `status`.
 - Context window, output limit, thinking levels and compat flags are copied from pi's built-in catalog when a matching model exists (for example `claudeopus55` maps to `claude-opus-5-5`); otherwise 128000 and 16384.
 
 ## Install
