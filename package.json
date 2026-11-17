@@ -1,6 +1,6 @@
 {
   "name": "pi-argo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Argo gateway (ANL) model provider for the pi coding agent",
   "keywords": ["pi-package"],
   "license": "Apache-2.0",
