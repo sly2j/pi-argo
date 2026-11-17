@@ -1,0 +1,20 @@
+{
+  "name": "pi-argo",
+  "version": "0.1.0",
+  "description": "Argo gateway (ANL) model provider for the pi coding agent",
+  "keywords": ["pi-package"],
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "pi": {
+    "extensions": ["./extensions/argo.ts"]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.ts",
+    "test:live": "node --test tests/live.test.ts"
+  }
+}
